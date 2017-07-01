@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'spree', '~> 3.2.0'
 gem 'spree_auth_devise', '~> 3.2'
 gem 'spree_gateway', '~> 3.2'
+gem 'font-awesome-rails'
 
 group :development, :test do
   gem 'byebug', platform: :mri
