@@ -13,4 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap
+//= require jquery.flexslider
+//= require SmoothScroll.min
+//= require bars
+//= require easing
+//= require jarallax
+//= require move-top
+//= require main
 //= require_tree .

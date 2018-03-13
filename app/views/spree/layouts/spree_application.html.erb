@@ -1,0 +1,84 @@
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9" lang="<%= I18n.locale %>"> <![endif]-->
+<!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
+  <head data-hook="inside_head">
+    <%= render partial: 'spree/shared/head' %>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+    <%= render partial: 'spree/shared/header' %>
+
+    <%= render 'spree/shared/main' if params[:controller] == 'spree/home' &&  params[:action] == 'index'%>
+
+    <div class="container">
+      <div class="row" data-hook>
+        <%= breadcrumbs(@taxon) %>
+
+        <%= render partial: 'spree/shared/sidebar' if content_for? :sidebar %>
+
+        <div id="content" class="<%= !content_for?(:sidebar) ? "col-sm-12" : "col-sm-8 col-md-9" %>" data-hook>
+          <%= flash_messages %>
+          <%= yield %>
+        </div>
+
+        <%= yield :templates %>
+
+      </div>
+    </div>
+      <div class="footer-agile jarallax">
+    <div class="container">
+      <div class="footer-top-agileinfo">  
+        <div class="social-wthree-icons bnragile-icons">
+          <ul>
+            <li><a href="#" class="fa fa-facebook icon icon-border facebook"> </a></li>
+            <li><a href="#" class="fa fa-twitter icon icon-border twitter"> </a></li>
+            <li><a href="#" class="fa fa-google-plus icon icon-border googleplus"> </a></li>
+            <li><a href="#" class="fa fa-dribbble icon icon-border dribbble"> </a></li> 
+          </ul>
+          <div class="clearfix"> </div>
+        </div>  
+      </div>
+      <div class="footer-btm-agileinfo">
+        <div class="col-md-4 col-xs-4 footer-grid">
+          <h3>Useful Info</h3>
+          <ul>
+            <li><a href="single.html"><i class="glyphicon glyphicon-menu-right"></i>Hendrerit quam</a></li>
+            <li><a href="single.html"><i class="glyphicon glyphicon-menu-right"></i>Amet consectetur </a></li>
+            <li><a href="single.html"><i class="glyphicon glyphicon-menu-right"></i>Iquam hendrerit</a></li>
+            <li><a href="single.html"><i class="glyphicon glyphicon-menu-right"></i>Donec ut lectus </a></li>
+          </ul>
+        </div> 
+        <div class="col-md-4 col-xs-3 footer-grid w3social">
+          <h3>Navigation</h3> 
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li> 
+            <li><a href="gallery.html">Gallery</a></li> 
+            <li><a href="contact.html">Contact</a></li> 
+          </ul> 
+        </div> 
+        <div class="col-md-4 col-xs-5 footer-grid footer-review">
+          <h3>Newsletter</h3>
+          <form action="#" method="post">
+            <input type="email" name="Email" placeholder="Your Email" required="">
+            <input type="submit" value="Subscribe"> 
+            <div class="clearfix"> </div>
+          </form> 
+          <div class="copy-w3lsright"> 
+            <p>© 2017 Bio Farm. All rights reserved | Design by <a href="http://w3layouts.com"> W3layouts.</a></p>
+          </div> 
+        </div> 
+        <div class="clearfix"> </div>
+      </div>   
+    </div>
+  </div> 
+
+  </body>
+</html>

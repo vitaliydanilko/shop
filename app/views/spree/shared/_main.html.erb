@@ -1,0 +1,120 @@
+<div class="banner jarallax">
+  <!-- banner-w3ltext -->
+  <div class="banner-w3ltext"> 
+    <h4><span class="fa fa-phone"></span> +01 222 333 444</h4>  
+    <h6>1</h6>
+    <div class="flexslider">
+      <ul class="slides">
+        <li>
+          <h5>Duis euismod massa ut sem fringilla blandit </h5> 
+          <h2>Welcome To Bio Farm</h2>
+        </li>
+        <li>
+          <h5>Sem fringilla blandit duis euismod massa ut </h5> 
+          <h3>Duis euismod massa</h3>
+        </li>
+        <li>
+          <h5>Fringilla blandit duis euismod massa ut sem</h5> 
+          <h3>Cons Adipiscing Elit</h3>
+        </li>
+      </ul>
+    </div>    
+  </div> 
+</div>
+  <div class="news">
+    <div class="container"> 
+      <div class="w3ls-title">
+        <h3 class="agileits-title">КАТАЛОГ ТОВАРОВ</h3> 
+      </div> 
+      <div class="agileits_w3layouts_news_grids"> 
+        <div class="col-md-3 col-xs-6 agileits_w3layouts_news_grid">
+          <div class="w3_agileits_news_grid">
+            <%= image_tag "g3.jpg", class: "img-responsive" %>
+            <div class="w3_agileits_news_grid_pos">
+              <h4>15 Jan 2017</h4>
+            </div>
+          </div>
+          <h5><a href="single.html">Bibendum ex sit amet</a></h5>
+          <p>Nunc sodales augue in felis facilisis consectetur.</p>
+        </div>    
+        <div class="col-md-3 col-xs-6 agileits_w3layouts_news_grid">
+          <div class="w3_agileits_news_grid">
+            <%= image_tag "g1.jpg", class: "img-responsive" %>
+            <div class="w3_agileits_news_grid_pos">
+              <h4>19 Jan 2017</h4>
+            </div>
+          </div>
+          <h5><a href="single.html">Augue in felis facili</a></h5>
+          <p>Nunc sodales augue in felis facilisis consectetur.</p>
+        </div>  
+        <div class="col-md-3 col-xs-6 agileits_w3layouts_news_grid">
+          <div class="w3_agileits_news_grid">
+            <%= image_tag "g2.jpg", class: "img-responsive" %>
+            <div class="w3_agileits_news_grid_pos">
+              <h4>23 Feb 2017</h4>
+            </div>
+          </div>
+          <h5><a href="single.html">Facilisis consecte</a></h5>
+          <p>Nunc sodales augue in felis facilisis consectetur.</p>
+        </div>   
+        <div class="col-md-3 col-xs-6 agileits_w3layouts_news_grid">
+          <div class="w3_agileits_news_grid">
+            <%= image_tag "g3.jpg", class: "img-responsive" %>
+            <div class="w3_agileits_news_grid_pos">
+              <h4>28 Feb 2017</h4>
+            </div>
+          </div>
+          <h5><a href="single.html">Sodales augue felis</a></h5>
+          <p>Nunc sodales augue in felis facilisis consectetur.</p>
+        </div>
+        <div class="clearfix"> </div>
+      </div>
+    </div>
+  </div>
+<script type="text/javascript">
+    $(window).load(function(){
+      $('.flexslider').flexslider({
+      animation: "slide",
+      start: function(slider){
+        $('body').removeClass('loading');
+      }
+      });
+    });
+  </script>
+  <!-- End-slider-script --> 
+  <!-- start-smooth-scrolling -->
+
+  <script type="text/javascript">
+      jQuery(document).ready(function($) {
+        $(".scroll").click(function(event){   
+          event.preventDefault();
+      
+      $('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+        });
+      });
+  </script>
+  <!-- //end-smooth-scrolling --> 
+  <!-- smooth-scrolling-of-move-up -->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      /*
+      var defaults = {
+        containerID: 'toTop', // fading element id
+        containerHoverID: 'toTopHover', // fading element hover id
+        scrollSpeed: 1200,
+        easingType: 'linear' 
+      };
+      */
+      
+      $().UItoTop({ easingType: 'easeOutQuart' });
+      
+    });
+  </script>
+  <script type="text/javascript">
+    /* init Jarallax */
+    $('.jarallax').jarallax({
+      speed: 0.5,
+      imgWidth: 1366,
+      imgHeight: 768
+    })
+  </script>
